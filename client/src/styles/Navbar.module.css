@@ -1,0 +1,12 @@
+.nav {
+    background-color:  var(--clr-primary);
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    color: white;
+}
+
+.nav a{
+    color: white;
+}
