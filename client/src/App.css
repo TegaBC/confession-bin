@@ -1,6 +1,9 @@
-#root {
-  max-width: 1280px;
+:root {
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+
+  --clr-primary: #1d1d1f;
+  --clr-primary-hover: #131314;
+  --clr-secondary: #9f5cff;
+  --clr-secondary-hover: #8833ff;
 }
