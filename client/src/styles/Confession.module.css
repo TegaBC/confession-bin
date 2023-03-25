@@ -1,0 +1,23 @@
+.confession {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 200px;
+    max-width: 600px;
+    border-radius: 1rem;
+    border: 3px solid var(--clr-secondary);
+    padding: 1rem;
+}
+
+.confession h1 {
+    margin: 0;
+}
+
+.confession h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--clr-third);
+    margin: 0;
+}
+
