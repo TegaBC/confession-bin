@@ -1,6 +1,7 @@
 import express from "express"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
+import cors from "cors"
 
 import postRoutes from "./routes/posts.js"
 dotenv.config()
@@ -10,6 +11,8 @@ const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.json());
+app.use(cors());
+
 
 // Routes
 app.get('/ping', (req, res) => {
