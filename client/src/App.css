@@ -1,9 +1,16 @@
-:root {
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
+:root {
   --clr-primary: #1d1d1f;
   --clr-primary-hover: #131314;
   --clr-secondary: #9f5cff;
   --clr-secondary-hover: #8833ff;
+  --font-primary: 'Montserrat', sans-serif;
+
+  font-family: var(--font-primary);
+}
+
+body {
+  margin: 0;
+
 }
