@@ -1,11 +1,11 @@
 .nav {
-    background-color:  var(--clr-secondary);
+    background-color: var(--clr-primary);
     font-weight: 700;
     display: flex;
+    border-bottom: 3px solid var(--clr-secondary);
     justify-content: space-around;
     padding: 1rem;
     color: white;
-    border-bottom: 3px solid white;
 }
 
 .nav a{
