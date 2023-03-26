@@ -8,4 +8,5 @@ Tech used:
 - ReactJS
 
 Todo:
->> Add caching of posts.
+- Cachce posts
+- Add posting page
