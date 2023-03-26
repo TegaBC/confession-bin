@@ -1,9 +1,10 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom"
 
-import HomePage from './pages/Home'
 import NavBar from "./components/Navbar"
+import HomePage from './pages/Home'
 import ViewPost from './pages/ViewPost'
+import CreatePost from './pages/CreatePost'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/confession/:id" element={<ViewPost/>} />
+          <Route path="/confession/create" element={<CreatePost/>} />
         </Routes>
     </div>
   )
