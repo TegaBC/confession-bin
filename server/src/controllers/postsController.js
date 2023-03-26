@@ -1,3 +1,5 @@
+import PostModel from "../models/postModel.js" // grab model
+
 export const createPost = (req, res) => {
     const { title, content } = req.body
 
@@ -15,7 +17,6 @@ export const createPost = (req, res) => {
         })
         res.json({ message: "Post completed" })
     } catch(err) {
-        console.log(err)
         res.status(500).json({ message: "Post failed to upload." })
     }
 }
@@ -29,12 +30,12 @@ export const getNewPosts = async (req, res) => {
 
         res.json({ message: messages })
     } catch (err) {
-        console.log(err);
         res.status(500).json({ message: "Failed to fetch posts" })
     }
 }
 
 export const getPostFromId = async (req, res) => {
+
     const { id } = req.params
     try {
         const post = await PostModel.findOne({ _id: id }).exec()
@@ -42,11 +43,10 @@ export const getPostFromId = async (req, res) => {
         if (!post) {
             res.status(400).json({ message: "Post does not exist" })
         } else {
-            res.json({ message: post })
+            res.json({ title: post.title, content: post.content, time: post.timestamp })
         }
 
     } catch (err) {
-        console.log(err);
         res.status(500).json({ message: "Failed to fetch post" })
     }
 }

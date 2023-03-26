@@ -1,5 +1,4 @@
 import express from "express" 
-import PostModel from "../models/postModel.js" // grab model
 import { createPost, getNewPosts, getPostFromId } from "../controllers/postsController.js"
 
 const router = express.Router()
