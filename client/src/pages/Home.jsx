@@ -9,7 +9,6 @@ async function fetchNewPosts() {
     try {
         const response = await fetch(link)
         const posts = await response.json()
-        console.log("POST: ", posts.message)
 
         if (response.status == 200) return posts.message
    } catch(err) {
@@ -34,7 +33,7 @@ export default function HomePage() {
             <h1>Latest confessions</h1>
             <h2>Want to make a confession? Click the plus at the top of the screen and post an anonymous confession.</h2>
             <div className={Styles.container}>
-            {confessions.map((post) => <Confession title={post.title} content={post.content} time={post.timestamp} linkId={post._id} />)}
+            {confessions.map((post) => <Confession key={post._id} title={post.title} content={post.content} time={post.timestamp} linkId={post._id} />)}
             </div>
         </div>
     )
