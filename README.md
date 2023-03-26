@@ -1,4 +1,12 @@
 # Confession Bin
 
-MERN stack application, a website that lets you make, and read anon confessions.
+A full-stack website that lets you make, and read anonymous confessions.
 
+Tech used:
+- MongoDB / Mongoose
+- ExpressJS
+- ReactJS
+
+Todo:
+- Cachce posts
+- Add posting page
