@@ -5,9 +5,11 @@
     align-items: flex-start;
     min-height: 200px;
     max-width: 600px;
+    width: clamp(300px, 50vw, 600px);
     border-radius: 1rem;
     border: 3px solid var(--clr-secondary);
     padding: 1rem;
+    color: white;
 }
 
 .confession h1 {
