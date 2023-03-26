@@ -1,10 +1,11 @@
 import Styles from "../styles/ViewPost.module.css"
 import Confession from "../components/Confession"
-import { useLocation, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
+import { ip } from "../config"
 
 async function fetchPostFromID(id) {
-    const link = `http://localhost:8080/posts/${id}`
+    const link = `${ip}/posts/${id}`
   
     try {
         const response = await fetch(link)

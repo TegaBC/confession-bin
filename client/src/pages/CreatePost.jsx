@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import Styles from "../styles/CreatePost.module.css"
+import { ip } from "../config"
 
 export default function CreatePost() {
     const navigate = useNavigate()
@@ -17,7 +18,7 @@ export default function CreatePost() {
         }
     
         try {
-            const submitToServer = await fetch('http://localhost:8080/posts/create', {
+            const submitToServer = await fetch(ip + '/posts/create', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'

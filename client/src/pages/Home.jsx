@@ -2,9 +2,10 @@ import Styles from "../styles/Home.module.css"
 import Confession from "../components/Confession"
 import { useState } from "react"
 import { useEffect } from "react"
+import { ip } from "../config"
 
 async function fetchNewPosts() {
-    const link = `http://localhost:8080/posts/` // this link gets max 30 new posts
+    const link = `${ip}/posts/` // this link gets max 30 new posts
   
     try {
         const response = await fetch(link)
