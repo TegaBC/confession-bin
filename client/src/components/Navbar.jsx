@@ -5,8 +5,6 @@ export default function NavBar() {
     return (<nav className={Styles.nav}>
         <Link to="/" className={Styles.name}>ConfessionBin</Link>
 
-        <a href="">
-        <i className="bi bi-plus-lg"></i>
-        </a>
+        <Link to="/confession/create"><i className="bi bi-plus-lg"></i></Link>
     </nav>)
 }
