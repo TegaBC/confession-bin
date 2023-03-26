@@ -12,8 +12,16 @@
     color: white;
 }
 
-.confession h1 {
+.clickable {
+    cursor: pointer;
+}
+
+.confession h1, .confession a{
     margin: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .confession h2 {
