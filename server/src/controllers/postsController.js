@@ -1,6 +1,6 @@
 import PostModel from "../models/postModel.js" // grab model
 
-export const createPost = (req, res) => {
+export const createPost = async (req, res) => {
     const { title, content } = req.body
    
     if (!title || !content) {
@@ -21,11 +21,11 @@ export const createPost = (req, res) => {
 
     // create a post, if it errors out we let them know it didn't work
     try {
-        PostModel.create({
+        const newPost = await PostModel.create({
             title: title,
             content: content, 
         })
-        res.json({ message: "Post completed" })
+        res.json({ message: "Post completed", _id: newPost._id.toString() })
     } catch(err) {
         res.status(500).json({ message: "Post failed to upload." })
     }
