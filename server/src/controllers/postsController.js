@@ -2,14 +2,24 @@ import PostModel from "../models/postModel.js" // grab model
 
 export const createPost = (req, res) => {
     const { title, content } = req.body
-
+   
+    if (!title || !content) {
+        res.status(400).json({ error: "Title and content are both required."})
+        return
+    }
+ 
     // check if title is too long
     if (title.length > 255) {
-        res.status(500).json({ error: "Title is too long."})
+        res.status(400).json({ error: "Title is too long."})
         return
     } 
 
-    // create a post, if it errors out we let them know it didnt work
+    if (content.length < 100) {
+        res.status(400).json({ error: "Confession must be at least 100 characters long."})
+        return
+    } 
+
+    // create a post, if it errors out we let them know it didn't work
     try {
         PostModel.create({
             title: title,
