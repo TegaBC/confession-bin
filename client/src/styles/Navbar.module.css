@@ -11,3 +11,7 @@
 .nav a{
     color: white;
 }
+
+.nav .name {
+    text-decoration: none;
+}

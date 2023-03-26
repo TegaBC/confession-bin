@@ -17,6 +17,7 @@
     margin-bottom: 2rem;
     font-weight: 500;
     color: var(--clr-third);
+    text-align: center;
 }
 
 .container {
