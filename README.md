@@ -9,4 +9,4 @@ Tech used:
 - ReactJS
 
 Todo:
-- Cachce requests
+- Cache requests
