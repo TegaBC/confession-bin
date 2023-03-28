@@ -10,7 +10,7 @@ async function fetchNewPosts() {
     try {
         const response = await fetch(link)
         const posts = await response.json()
-
+            
         if (response.status == 200) return posts.message
    } catch(err) {
         console.log(err)
