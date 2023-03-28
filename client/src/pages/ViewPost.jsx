@@ -4,14 +4,32 @@ import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { ip } from "../config"
 
+
+
 async function fetchPostFromID(id) {
     const link = `${ip}/posts/${id}`
   
+    // check cache before fetching
+    const postCache = localStorage.getItem(id)
+    if (postCache) {
+        // console.log("Fount data in cache, not fetching server.")
+        return JSON.parse(postCache)
+    } 
+
+
+    // fetch data
     try {
         const response = await fetch(link)
         const post = await response.json()
 
-        return response.status == 200 ? post : false
+        if (response.status == 200) {
+            // cache it for later use
+            localStorage.setItem(id, JSON.stringify(post))
+            // console.log("Returned data and cached for later use")
+            return post
+        } else {
+            return false
+        }
    } catch(err) {
         console.log(err)
    }
