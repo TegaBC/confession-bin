@@ -27,3 +27,7 @@
     border: none;
     cursor: pointer;
 }
+
+.post button:hover {
+    background-color: var(--clr-secondary-hover);
+}
