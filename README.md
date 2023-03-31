@@ -7,6 +7,3 @@ Tech used:
 - MongoDB / Mongoose
 - ExpressJS
 - ReactJS
-
-Todo:
-- Cache requests
